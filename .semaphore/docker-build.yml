@@ -23,5 +23,5 @@ blocks:
           commands:
             - checkout
             - docker build -t semaphore-go-example .
-            - echo "$DOCKER_USERNAME" | docker login --username "$DOCKER_USERNAME" --password-stdin
+              #- echo "$DOCKER_USERNAME" | docker login --username "$DOCKER_USERNAME" --password-stdin
             - docker push "$DOCKER_USERNAME"/semaphore-go-example:latest
