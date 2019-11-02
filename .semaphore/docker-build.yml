@@ -22,5 +22,6 @@ blocks:
         - name: Build and push
           commands:
             - checkout
-            - docker-compose build
-            - docker-compose push
+            - docker build -t semaphore-go-example .
+            - echo "$DOCKER_USERNAME" | docker login --username "$DOCKER_USERNAME" --password-stdin
+            - docker push "$DOCKER_USERNAME"/semaphore-go-example:latest
