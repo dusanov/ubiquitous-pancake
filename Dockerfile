@@ -12,7 +12,7 @@ WORKDIR /go/src/dusanov/semaphore-go-example
 # either manually or with a tool like "godep".)
 RUN go get github.com/lib/pq
 RUN go install dusanov/semaphore-go-example
-RUN ls -laR  /go/bin
+
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/semaphore-go-example
 
